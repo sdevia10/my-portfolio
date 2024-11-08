@@ -1,7 +1,12 @@
 body{
   background-image: url('../assets/img/dark_bg.png');
   background-size: cover;
+  overflow-x: hidden;
 
+}
+
+a{
+  text-decoration: none;
 }
 
 /* SMALL AND MEDIUM SCREENS */
@@ -28,13 +33,20 @@ body{
   flex-direction: column;
   height: 50%;
   justify-content: space-evenly;
-  overflow-x: hidden;
+  
 
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   line-height: 1/5;
+
+}
+
+.section2 img
+{
+  /* border-right: 30px; */
+  padding-right: 25px;
 
 }
 
