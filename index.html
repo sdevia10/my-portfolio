@@ -22,10 +22,17 @@
     <title>My Portfolio SD</title>
 
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="./assets/img/portfolio/star_icon.png" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/139738bc2f.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- GOOGLE FONTS -->
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap");
     </style>
   </head>
 
@@ -35,6 +42,12 @@
             style="display:none;visibility:hidden"></iframe></noscript> -->
     <!-- End Google Tag Manager (noscript) -->
     <div class="main-container">
+      <div class="title">
+        <div id="typedText">
+          <!-- <p id="typedText" ></p> -->
+        </div>
+      </div>
+      <h1>ABOUT ME</h1>
       <div class="section" id="aboutMe">
         Hola Soy Santiago Devia, Ingeniero electornico y Lorem ipsum dolor sit
         amet consectetur, adipisicing elit. Maiores asperiores fugiat, inventore
@@ -42,6 +55,9 @@
         doloremque rem, exercitationem consectetur ipsum nemo facilis similique
         debitis unde?
       </div>
+
+      <!-- DIVISION -->
+      <h1>PROJECTS</h1>
 
       <div class="section2">
         <a href="https://heycovid19.letsstopaids.org/" target="_blank">
@@ -85,9 +101,10 @@
                 <strong>24 Hour Wake</strong> <br />
                 <span class="desktop-text">
                   Connected to Hygraph CMS, and using graphQL (NoSQL) language,
-                  this responsive webpage allows for managers to easily modify pictures and
-                  information. Built using REACT and deployed through Vercel,
-                  this page invites users to participate in the 24H Wake event.
+                  this responsive webpage allows for managers to easily modify
+                  pictures and information. Built using REACT and deployed
+                  through Vercel, this page invites users to participate in the
+                  24H Wake event.
                 </span>
                 <span class="mobile-text">
                   Connected to Hygraph CMS with GraphQL, this webpage allows
@@ -98,7 +115,10 @@
           </div>
         </a>
 
-        <a href="https://react-player-mw5r-k0y3bqqwe-sdevia10s-projects.vercel.app/" target="_blank">
+        <a
+          href="https://react-player-mw5r-k0y3bqqwe-sdevia10s-projects.vercel.app/"
+          target="_blank"
+        >
           <div id="project3" class="project">
             <div class="card">
               <div>
@@ -121,6 +141,57 @@
           </div>
         </a>
       </div>
+
+      <!-- DIVISION -->
+      <h1>CONTACT</h1>
+
+      <div class="section3">
+        <div>s.devia10@gmail.com</div>
+        <div>+1 4372563839</div>
+        <div>
+          <a href="https://www.linkedin.com/in/santiago-devia/" target="_blank">
+            <i class="fa-brands fa-linkedin fa-xl"></i>
+          </a>
+        </div>
+      </div>
     </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      var i = 0;
+      var txt = "Hi! My name is Santiago! \n I am a Software Engineer";
+      var speed = 100;
+
+      // Calculate and set the container's initial height
+      function calculateHeight() {
+        var typedText = document.getElementById("typedText");
+        // typedText.style.height = `${txt.split("\n").length * 40}px`; // Assuming 20px line height
+        // typedText.style.height = `{100}px`;
+      }
+
+      calculateHeight();
+
+      function typeWriter() {
+        if (i < txt.length) {
+          if (txt.charAt(i) === "\n") {
+            document.getElementById("typedText").innerHTML += "<br>";
+          } else {
+            document.getElementById("typedText").innerHTML += txt.charAt(i);
+          }
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+
+      // function typeWriter() {
+      //   if (i < txt.length) {
+      //     document.getElementById("typedText").innerHTML += txt.charAt(i);
+      //     i++;
+      //     setTimeout(typeWriter, speed);
+      //   }
+      // }
+
+      typeWriter();
+    </script>
   </body>
 </html>
